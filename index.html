@@ -48,6 +48,19 @@
 			padding-right: 30px;
 		}
 	</style>
+	<script>
+	    $.ajax({
+		url: '/process.php',
+		type: 'POST',
+		dataType: "json",
+		data: {
+		    name: $('#name').val(),
+		    email: $('#email').val(),
+		}
+	    }).done(function(data){
+		    alert(JSON.stringify(data));
+	    });
+	</script>
 </head>
 <body>
 <!-- Begin Hero Bg -->
@@ -595,7 +608,7 @@
 							</div>
 							<div id="collapseSix" class="panel-collapse collapse">
 								<div class="panel-body">
-									Envianos un correo o contactanos directamente a nuestros telefonos. Nostros nos pondremos en contacto contigo para realizar una evaluacion de la comunidad y ver la mejor manera de realizar el proyecto.
+									Envianos un correo o contactanos directamente a nuestros telefonos. Nosotros nos pondremos en contacto contigo para realizar una evaluacion de la comunidad y ver la mejor manera de realizar el proyecto.
 								</div>
 							</div>
 						</div>
@@ -704,7 +717,7 @@
 							<textarea name="message" id="message" required></textarea>
 						</div>
 						<div class="wow fadeIn animated" data-wow-delay="0.3" data-wow-duration="1.5s">
-							<input id="submit" type="submit" name="submit" value="Send"/>
+							<input id="submit" type="submit" name="submit" value="Enviar"/>
 						</div>
 					</fieldset>
 				</form>
